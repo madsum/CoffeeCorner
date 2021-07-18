@@ -1,9 +1,6 @@
 package org.example;
 
-/**
- * Hello world!
- *
- */
+
 public class CoffeeCornerClient
 {
     public static void main( String[] args )
