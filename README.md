@@ -27,13 +27,13 @@ It has few discount conditions given such as:-
 2. If a customer orders a beverage and a snack, one of the extra's is free.
 
 
-The task was very simple. I was tried to implement using Test Driven Development (TDD). Also, I have applied few known design patterns as follows:-
+The task was very simple. I tried to develop using Test Driven Development (TDD). Also, I have applied few known design patterns as follows:-
 
 **1.Builder**  
 **2.SingleTone**  
 **3.Visitor Design Pattern**  
 
-Most of the application text was defined as resource "application_en_GB.properties"  so that it can be localized in a different language.
+Most of the application text was defined as resource "application_en_GB.properties"  so that it can be localized in a different language easily.
 
 The app is designed as loose coupling. It can be easily expanded.  
 
