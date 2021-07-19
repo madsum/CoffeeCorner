@@ -37,5 +37,5 @@ Most of the application text was defined as resource "application_en_GB.properti
 
 The app is designed as loose coupling. It can be easily expanded.  
 
-p.s: 
+p.s: To see the free drink logic you have to make 4 purchases in the same application execution time. Because I was not allowed to use any kind of data storage system as a database.
 
