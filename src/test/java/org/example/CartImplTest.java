@@ -7,6 +7,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CartImplTest {
 
+    @BeforeEach
+    void setUp() {
+        Receipt.resetItemPriceCalculators();
+    }
+
     @Test
     void testCheckFreeExtra(){
         var extraMilk = Menu.getExtraMilk();
