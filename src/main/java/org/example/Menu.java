@@ -119,7 +119,7 @@ public class Menu {
                 .build();
         specialRoastCoffee = new MenuItem.Builder()
                 .name(AppProperties.getResourceByKey(AppProperties.specialRoastCoffeeNameKey))
-                .price(Float.parseFloat(AppProperties.getResourceByKey(AppProperties.smallCoffeePriceKey)))
+                .price(Float.parseFloat(AppProperties.getResourceByKey(AppProperties.specialRoastCoffeePriceKey)))
                 .build();
 
         return new Builder()

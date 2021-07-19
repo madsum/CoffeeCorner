@@ -1,6 +1,6 @@
 package org.example;
 
-class MenuItem  {
+class MenuItem implements ItemPriceCalculator  {
 
     private String name;
     private float price;
@@ -14,7 +14,11 @@ class MenuItem  {
         this.size = builder.size;
     }
 
-  public static class Builder {
+    public float getItemPrice(Cart cart, boolean isFreeExtra) {
+        return cart.printReceiptAndCalculation(this, isFreeExtra);
+    }
+
+    public static class Builder {
 
         private String name;
         private float price;

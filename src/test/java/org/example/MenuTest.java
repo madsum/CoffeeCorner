@@ -24,11 +24,11 @@ class MenuTest {
 
     @Test
     public void testMenuContainsMediumCoffeeWithCorrectValues(){
-        MenuItem mediumCoffee = Menu.getSmallCoffee();
+        MenuItem mediumCoffee = Menu.getMediumCoffee();
         assertNotNull(mediumCoffee, "mediumCoffee must to be null");
         assertEquals(TestData.expectedCoffeeName, mediumCoffee.getName());
-        assertEquals(TestData.expectedMediumCoffeePrice, mediumCoffee.getPrice()+"");
-        assertEquals(TestData.expectedMediumCoffeePrice, mediumCoffee.getSize());
+        assertEquals(TestData.expectedMediumCoffeePriceDigit, mediumCoffee.getPrice());
+        assertEquals(TestData.expectedMediumCoffeeSize, mediumCoffee.getSize());
     }
 
     @Test
@@ -53,17 +53,17 @@ class MenuTest {
         MenuItem extraItem = Menu.getExtraMilk();
         assertNotNull(extraItem, "extraItem must to be null");
         assertEquals(TestData.expectedExtraMilkName, extraItem.getName());
-        assertEquals(TestData.expectedExtraMilkPrice, extraItem.getPrice()+"");
+        assertEquals(TestData.expectedExtraMilkPriceDigit, extraItem.getPrice());
 
         MenuItem foamedMilk = Menu.getFoamedMilk();
         assertNotNull(foamedMilk, "foamedMilk must to be null");
         assertEquals(TestData.expectedFoamedMilkName, foamedMilk.getName());
-        assertEquals(TestData.expectedFoamedMilkPrice, foamedMilk.getPrice()+"");
+        assertEquals(TestData.expectedFoamedMilkPriceDigit, foamedMilk.getPrice());
 
         MenuItem specialRoastCoffee = Menu.getSpecialRoastCoffee();
         assertNotNull(specialRoastCoffee, "specialRoastCoffee must to be null");
         assertEquals(TestData.expectedSpecialRoastCoffeeName, specialRoastCoffee.getName());
-        assertEquals(TestData.expectedSpecialRoastCoffeePrice, specialRoastCoffee.getPrice()+"");
+        assertEquals(TestData.expectedSpecialRoastCoffeePriceDigit, specialRoastCoffee.getPrice());
 
     }
 
