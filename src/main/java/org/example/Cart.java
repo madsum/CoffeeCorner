@@ -1,5 +1,5 @@
 package org.example;
 
 public interface Cart {
-    float printReceiptAndCalculation(MenuItem menuItem, boolean isFreeExtra, int purchaseCount);
+    float printReceiptAndCalculation(MenuItem menuItem, boolean isFreeExtra, BonusCard bonusCard);
 }

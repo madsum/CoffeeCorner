@@ -35,5 +35,7 @@ The task was very simple. I was tried to implement using Test Driven Development
 
 Most of the application text was defined as resource "application_en_GB.properties"  so that it can be localized in a different language.
 
-The app is designed as loose coupling. It can be easily expanded.
+The app is designed as loose coupling. It can be easily expanded.  
+
+p.s: 
 

@@ -22,7 +22,7 @@ class CartImplTest {
         Receipt.addToReceipt(MenuItemNumber.EXTRA_MILK, 1);
         float expectedTotal = TestData.expectedSmallCoffeePriceDigit+
                               TestData.expectedBaconRollPriceDigit;
-        float actualTotal = Receipt.calculatePrice(1);
+        float actualTotal = Receipt.calculatePrice(new BonusCard());
         assertEquals(expectedTotal, actualTotal);
     }
 
@@ -31,7 +31,9 @@ class CartImplTest {
         var smallCoffee = Menu.getSmallCoffee();
         Receipt.addToReceipt(MenuItemNumber.SMALL_COFFEE, 1);
         float expectedTotal = 0;
-        float actualTotal = Receipt.calculatePrice(4);
+        BonusCard bonusCard  = new BonusCard();
+        bonusCard.addPurchaseCount(4);
+        float actualTotal = Receipt.calculatePrice(bonusCard);
         assertEquals(expectedTotal, actualTotal);
     }
 
