@@ -31,7 +31,7 @@ class ReceiptTest {
     void testCalculatePrice(){
         Receipt.addToReceipt(MenuItemNumber.SMALL_COFFEE,1);
         Receipt.addToReceipt(MenuItemNumber.BACON_ROLL,1);
-        var calculatePrice = Receipt.calculatePrice();
+        var calculatePrice = Receipt.calculatePrice(1);
         assertEquals(TestData.expectedSmallCoffeePriceDigit+
                     TestData.expectedBaconRollPriceDigit, calculatePrice);
     }

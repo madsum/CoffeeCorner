@@ -7,8 +7,8 @@ public class CartImpl implements Cart {
     private boolean onlyOneFreeExtra = false;
     private float itemTotal = 0f;
 
-    public float printReceiptAndCalculation(MenuItem menuItem, boolean isFreeExtra) {
-        if(checkFreeDrink(menuItem)){
+    public float printReceiptAndCalculation(MenuItem menuItem, boolean isFreeExtra, int purchaseCount) {
+        if(checkFreeDrink(menuItem, purchaseCount)){
             return itemTotal;
         }
         return checkFreeExtra(menuItem, isFreeExtra);
@@ -33,10 +33,10 @@ public class CartImpl implements Cart {
         }
     }
 
-    public boolean checkFreeDrink(MenuItem menuItem){
+    public boolean checkFreeDrink(MenuItem menuItem, int purchaseCount ){
         boolean isFreeDrink = false;
         // give free drink on every 5th purchase
-        if(bonusCard.getPurchaseCounter() >= 4){
+        if(purchaseCount >= 4){
             if(menuItem.getName().compareToIgnoreCase(AppProperties.getResourceByKey(
                     AppProperties.coffeeNameKey)) == 0 || menuItem.getName().compareToIgnoreCase(AppProperties.getResourceByKey(
                     AppProperties.orangeJuiceNameKey)) == 0){

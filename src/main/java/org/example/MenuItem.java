@@ -14,8 +14,8 @@ class MenuItem implements ItemPriceCalculator  {
         this.size = builder.size;
     }
 
-    public float getItemPrice(Cart cart, boolean isFreeExtra) {
-        return cart.printReceiptAndCalculation(this, isFreeExtra);
+    public float getItemPrice(Cart cart, boolean isFreeExtra, int purchaseCount) {
+        return cart.printReceiptAndCalculation(this, isFreeExtra, purchaseCount);
     }
 
     public static class Builder {

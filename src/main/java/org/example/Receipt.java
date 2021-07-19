@@ -82,11 +82,13 @@ public class Receipt {
         return itemPriceCalculators;
     }
 
-    public static float calculatePrice() {
+    public static float calculatePrice(int purchaseCount) {
         Cart cart = new CartImpl();
         var wrapper = new Object() {
             float sum = 0f;
+            int wrapperPurchaseCount = purchaseCount;
             boolean freeExtra = false;
+
         };
         if( Receipt.isFreeExtraCondition1() &&
                 Receipt.isFreeExtraCondition2()){
@@ -94,7 +96,7 @@ public class Receipt {
         }
 
         itemPriceCalculators.forEach( item -> {
-            wrapper.sum = wrapper.sum + item.getItemPrice(cart, wrapper.freeExtra);
+            wrapper.sum = wrapper.sum + item.getItemPrice(cart, wrapper.freeExtra, wrapper.wrapperPurchaseCount);
         });
         return wrapper.sum;
     } 

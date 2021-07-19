@@ -168,7 +168,7 @@ public class Menu {
         System.out.printf(" Price: %.2f %s \n",foamedMilk.getPrice(),currency);
         System.out.print(MenuItemNumber.SPECIAL_ROAST_COFFEE.getValue()+". "+specialRoastCoffee.getName());
         System.out.printf(" Price: %.2f %s \n",specialRoastCoffee.getPrice(),currency);
-        System.out.println("Enter 0 (zero) for the payment: ");
+        System.out.println("Enter 0 (zero) for the payment ");
         System.out.print("Please enter the menu number 0 to 8: ");
     }
 

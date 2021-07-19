@@ -42,7 +42,7 @@ public class CoffeeCornerClient {
                 Menu.displayMenu();
             }
             System.out.println("\n\n \t\t\t PAYMENT RECEIPT \n");
-            float totalPrice = Receipt.calculatePrice();
+            float totalPrice = Receipt.calculatePrice(bonusCard.getPurchaseCounter());
             if (totalPrice == 0) {
                 System.exit(0);
             }
@@ -57,6 +57,7 @@ public class CoffeeCornerClient {
             UserInputManager.handleInput();
         }
         System.out.println("THANKS FOR YOUR ORDERS. SEE YOU SOON :)\n");
+        bonusCard.resetPurchaseCounter();
         UserInputManager.closeScanner();
     }
 

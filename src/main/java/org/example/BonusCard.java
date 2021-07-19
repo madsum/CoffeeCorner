@@ -12,7 +12,7 @@ public class BonusCard {
     }
 
 
-    public void addPurchaseCount(int purchaseCounter){
-        purchaseCounter += purchaseCounter;
+    public void addPurchaseCount(int inputPurchaseCounter){
+        purchaseCounter += inputPurchaseCounter;
     }
 }
