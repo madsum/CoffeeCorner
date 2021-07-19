@@ -11,12 +11,12 @@ class MenuItemTest {
 
         MenuItem coffee = new MenuItem.Builder()
                 .name(TestData.expectedCoffeeName)
-                .price(Float.parseFloat(TestData.expectedSmallCoffeePrice))
+                .price(TestData.expectedSmallCoffeePriceDigit)
                 .size(TestData.expectedSmallCoffeeSize)
                 .quantity(1)
                 .build();
         assertNotNull(coffee, "coffee must not be null");
-        assertEquals(TestData.expectedSmallCoffeePrice, coffee.getPrice()+"");
+        assertEquals(TestData.expectedSmallCoffeePriceDigit, coffee.getPrice());
         assertEquals(TestData.expectedSmallCoffeeSize, coffee.getSize());
         assertEquals(1, coffee.getQuantity());
     }

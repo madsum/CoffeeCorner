@@ -1,6 +1,7 @@
 package org.example;
 
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -8,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class ReceiptTest {
 
-    @AfterEach
+    @BeforeEach
     void tearDown() {
         Receipt.resetItemPriceCalculators();
     }
@@ -20,12 +21,10 @@ class ReceiptTest {
         var actualList = Receipt.getItemPriceCalculators();
         var actualCoffee = actualList.get(0);
         var actualBaconRoll = actualList.get(1);
-
         assertNotNull(actualList);
         assertNotNull(actualCoffee);
         assertNotNull(actualBaconRoll);
         assertEquals(2, actualList.size());
-
     }
 
     @Test

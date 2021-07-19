@@ -18,7 +18,7 @@ class MenuTest {
         MenuItem smallCoffee = Menu.getSmallCoffee();
         assertNotNull(smallCoffee, "smallCoffee must to be null");
         assertEquals(TestData.expectedCoffeeName, smallCoffee.getName());
-        assertEquals(TestData.expectedSmallCoffeePrice, smallCoffee.getPrice()+"");
+        assertEquals(TestData.expectedSmallCoffeePriceDigit, smallCoffee.getPrice());
         assertEquals(TestData.expectedSmallCoffeeSize, smallCoffee.getSize());
     }
 
@@ -36,7 +36,7 @@ class MenuTest {
         MenuItem largeCoffee = Menu.getLargeCoffee();
         assertNotNull(largeCoffee, "largeCoffee must to be null");
         assertEquals(TestData.expectedCoffeeName, largeCoffee.getName());
-        assertEquals(TestData.expectedLargeCoffeePrice, largeCoffee.getPrice()+"");
+        assertEquals(TestData.expectedLargeCoffeePriceDigit, largeCoffee.getPrice());
         assertEquals(TestData.expectedLargeCoffeeSize, largeCoffee.getSize());
     }
 
@@ -45,7 +45,7 @@ class MenuTest {
         MenuItem baconRoll = Menu.getBaconRoll();
         assertNotNull(baconRoll, "baconRoll must to be null");
         assertEquals(TestData.expectedBaconRollName, baconRoll.getName());
-        assertEquals(TestData.expectedBaconRollPrice, baconRoll.getPrice()+"");
+        assertEquals(TestData.expectedBaconRollPriceDigit, baconRoll.getPrice());
     }
 
     @Test

@@ -3,6 +3,7 @@ package org.example;
 public class CartImpl implements Cart {
 
     private String currency = AppProperties.getResourceByKey(AppProperties.currencyTypeKey);
+    private BonusCard bonusCard = new BonusCard();
     private boolean onlyOneFreeExtra = false;
     private float itemTotal = 0f;
 
@@ -35,13 +36,13 @@ public class CartImpl implements Cart {
     public boolean checkFreeDrink(MenuItem menuItem){
         boolean isFreeDrink = false;
         // give free drink on every 5th purchase
-        if(BonusCard.getPurchaseCounter() >= 4){
+        if(bonusCard.getPurchaseCounter() >= 4){
             if(menuItem.getName().compareToIgnoreCase(AppProperties.getResourceByKey(
                     AppProperties.coffeeNameKey)) == 0 || menuItem.getName().compareToIgnoreCase(AppProperties.getResourceByKey(
                     AppProperties.orangeJuiceNameKey)) == 0){
                 System.out.println("For every 5th purchase, you get a free drink.");
                 isFreeDrink = true;
-                BonusCard.resetPurchaseCounter();
+                bonusCard.resetPurchaseCounter();
                 if(menuItem.getQuantity() > 1){
                     menuItem.setQuantity(menuItem.getQuantity() - 1);
                     printItem(menuItem);

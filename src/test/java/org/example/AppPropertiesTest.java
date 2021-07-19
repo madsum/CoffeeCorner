@@ -19,11 +19,11 @@ class AppPropertiesTest {
     @Test
     public void testGetResourceByKey(){
         String actualName = AppProperties.getResourceByKey(AppProperties.coffeeNameKey);
-        String actualBaconRollPrice = AppProperties.getResourceByKey(AppProperties.baconRollPriceKey);
+        float actualBaconRollPrice = Float.parseFloat(AppProperties.getResourceByKey(AppProperties.baconRollPriceKey));
         String actualAppTitle = AppProperties.getResourceByKey(AppProperties.appTitleKey);
 
         assertEquals(TestData.expectedCoffeeName, actualName);
-        assertEquals(TestData.expectedBaconRollPrice, actualBaconRollPrice);
+        assertEquals(TestData.expectedBaconRollPriceDigit, actualBaconRollPrice);
         assertEquals(TestData.expectedAppTitle, actualAppTitle);
     }
 
@@ -33,28 +33,28 @@ class AppPropertiesTest {
         assertEquals(TestData.expectedCurrencyType, AppProperties.getResourceByKey(AppProperties.currencyTypeKey));
         assertEquals(TestData.expectedCoffeeName, AppProperties.getResourceByKey(AppProperties.coffeeNameKey));
 
-        assertEquals(TestData.expectedSmallCoffeePrice, AppProperties.getResourceByKey(AppProperties.smallCoffeePriceKey));
+        assertEquals(TestData.expectedSmallCoffeePriceDigit, Float.parseFloat(AppProperties.getResourceByKey(AppProperties.smallCoffeePriceKey)));
         assertEquals(TestData.expectedSmallCoffeeSize, AppProperties.getResourceByKey(AppProperties.smallCoffeeSizeKey));
 
-        assertEquals(TestData.expectedMediumCoffeePrice, AppProperties.getResourceByKey(AppProperties.mediumCoffeePriceKey));
+        assertEquals(TestData.expectedMediumCoffeePriceDigit, Float.parseFloat(AppProperties.getResourceByKey(AppProperties.mediumCoffeePriceKey)));
         assertEquals(TestData.expectedMediumCoffeeSize, AppProperties.getResourceByKey(AppProperties.mediumCoffeeSizeKey));
 
-        assertEquals(TestData.expectedLargeCoffeePrice, AppProperties.getResourceByKey(AppProperties.largeCoffeePriceKey));
+        assertEquals(TestData.expectedLargeCoffeePriceDigit, Float.parseFloat(AppProperties.getResourceByKey(AppProperties.largeCoffeePriceKey)));
         assertEquals(TestData.expectedLargeCoffeeSize, AppProperties.getResourceByKey(AppProperties.largeCoffeeSizeKey));
 
         assertEquals(TestData.expectedOrangeJuiceName, AppProperties.getResourceByKey(AppProperties.orangeJuiceNameKey));
-        assertEquals(TestData.expectedOrangeJuicePrice, AppProperties.getResourceByKey(AppProperties.orangeJuicePriceKey));
+        assertEquals(TestData.expectedOrangeJuicePriceDigit, Float.parseFloat(AppProperties.getResourceByKey(AppProperties.orangeJuicePriceKey)));
         assertEquals(TestData.expectedOrangeJuiceSize, AppProperties.getResourceByKey(AppProperties.orangeJuiceSizeKey));
 
 
         assertEquals(TestData.expectedBaconRollName, AppProperties.getResourceByKey(AppProperties.baconRollNameKey));
-        assertEquals(TestData.expectedBaconRollPrice, AppProperties.getResourceByKey(AppProperties.baconRollPriceKey));
+        assertEquals(TestData.expectedBaconRollPriceDigit, Float.parseFloat(AppProperties.getResourceByKey(AppProperties.baconRollPriceKey)));
 
         assertEquals(TestData.expectedExtraMilkName, AppProperties.getResourceByKey(AppProperties.extraMilkNameKey));
-        assertEquals(TestData.expectedExtraMilkPrice, AppProperties.getResourceByKey(AppProperties.extraMilkPriceKey));
+        assertEquals(TestData.expectedExtraMilkPriceDigit, Float.parseFloat(AppProperties.getResourceByKey(AppProperties.extraMilkPriceKey)));
         assertEquals(TestData.expectedFoamedMilkName, AppProperties.getResourceByKey(AppProperties.foamedMilkNameKey));
-        assertEquals(TestData.expectedFoamedMilkPrice, AppProperties.getResourceByKey(AppProperties.foamedMilkPriceKey));
+        assertEquals(TestData.expectedFoamedMilkPriceDigit, Float.parseFloat(AppProperties.getResourceByKey(AppProperties.foamedMilkPriceKey)));
         assertEquals(TestData.expectedSpecialRoastCoffeeName, AppProperties.getResourceByKey(AppProperties.specialRoastCoffeeNameKey));
-        assertEquals(TestData.expectedSpecialRoastCoffeePrice, AppProperties.getResourceByKey(AppProperties.specialRoastCoffeePriceKey));
+        assertEquals(TestData.expectedSpecialRoastCoffeePriceDigit, Float.parseFloat(AppProperties.getResourceByKey(AppProperties.specialRoastCoffeePriceKey)));
     }
 }

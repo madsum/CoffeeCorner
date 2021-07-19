@@ -1,18 +1,18 @@
 package org.example;
 
 public class BonusCard {
-    private static int purchaseCounter;
+    private int purchaseCounter;
 
-    public static void resetPurchaseCounter(){
+    public void resetPurchaseCounter(){
         purchaseCounter = 0;
     }
 
-    public static int getPurchaseCounter() {
+    public int getPurchaseCounter() {
         return purchaseCounter;
     }
 
 
-    public static void addPurchaseCount(){
-        purchaseCounter += 1;
+    public void addPurchaseCount(int purchaseCounter){
+        purchaseCounter += purchaseCounter;
     }
 }

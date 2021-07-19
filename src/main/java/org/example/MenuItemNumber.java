@@ -12,7 +12,7 @@ public enum MenuItemNumber {
 
     private final int itemNumber;
 
-    private MenuItemNumber(int itemNumber) {
+    MenuItemNumber(int itemNumber) {
         this.itemNumber = itemNumber;
     }
 
