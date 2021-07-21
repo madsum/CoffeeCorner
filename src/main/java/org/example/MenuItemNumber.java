@@ -1,5 +1,8 @@
 package org.example;
 
+/**
+ *  Enum for all the menu items.
+ */
 public enum MenuItemNumber {
     SMALL_COFFEE(1),
     MEDIUM_COFFEE(2),

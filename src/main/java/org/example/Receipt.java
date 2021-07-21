@@ -11,6 +11,11 @@ public class Receipt {
     private static boolean freeExtraCondition1 = false;
     private static boolean freeExtraCondition2 = false;
 
+    /**
+     * This adds menu items to generic list
+     * @param itemNumber Enum for menu items
+     * @param howMany how many same items
+     */
     public static void addToReceipt(MenuItemNumber itemNumber, int howMany){
         switch (itemNumber){
             case SMALL_COFFEE -> {
@@ -82,13 +87,17 @@ public class Receipt {
         return itemPriceCalculators;
     }
 
+    /**
+     * Calculates total price and return the total price
+     * @param bonusCard it is required to get the number of purchases and reset the purchase count
+     * @return total price
+     */
     public static float calculatePrice(BonusCard bonusCard) {
         Cart cart = new CartImpl();
         var wrapper = new Object() {
             float sum = 0f;
             BonusCard wrapperBonusCard = bonusCard;
             boolean freeExtra = false;
-
         };
         if( Receipt.isFreeExtraCondition1() &&
                 Receipt.isFreeExtraCondition2()){

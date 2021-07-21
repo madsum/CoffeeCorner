@@ -18,12 +18,17 @@ public class CoffeeCornerClient {
         bonusCard = new BonusCard();
     }
 
+    //
+
+    /**
+     * Application entry point. It loops until the user wants to exit the app.
+     */
     public void startApp() {
         while (UserInputManager.appContinue) {
             Menu.displayMenu();
             while (UserInputManager.handleInput()) {
                 int itemNumber = UserInputManager.getInputNumber();
-                System.out.printf("Same item how many: ");
+                ConsolePrinter.printText("Same item how many: ");
                 UserInputManager.handleInput();
                 int howMany = UserInputManager.getInputNumber();
                 if(howMany == 0){
@@ -41,22 +46,18 @@ public class CoffeeCornerClient {
                 Receipt.addToReceipt(menuItemNumber, howMany);
                 Menu.displayMenu();
             }
-            System.out.println("\n\n \t\t\t PAYMENT RECEIPT \n");
+            ConsolePrinter.printReceiptHeader();
             float totalPrice = Receipt.calculatePrice(bonusCard);
             if (totalPrice == 0) {
                 System.exit(0);
             }
-            System.out.println("----------------------------------------------");
-            System.out.println("TOTAL PRICE                            : " + totalPrice);
-            System.out.println("Please pay " + totalPrice + " " +
-                    AppProperties.getResourceByKey(AppProperties.currencyTypeKey) +
-                    " Thanks!");
+            ConsolePrinter.printReceiptFooter(totalPrice);
             bonusCard.addPurchaseCount(1);
             Receipt.resetItemPriceCalculators();
-            System.out.println("If you want to continue more orders enter [enter], or q for quite: ");
+            ConsolePrinter.printContinue();
             UserInputManager.handleInput();
         }
-        System.out.println("THANKS FOR YOUR ORDERS. SEE YOU SOON :)\n");
+        ConsolePrinter.printThanks();
         bonusCard.resetPurchaseCounter();
         UserInputManager.closeScanner();
     }

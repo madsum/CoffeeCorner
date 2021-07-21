@@ -27,7 +27,7 @@ It has few discount conditions given such as:-
 2. If a customer orders a beverage and a snack, one of the extra's is free.
 
 
-The task was very simple. I tried to develop using Test Driven Development (TDD). Also, I have applied few known design patterns as follows:-
+I tried to develop using Test Driven Development (TDD). Also, I have applied few known design patterns as follows:-
 
 **1.Builder**  
 **2.SingleTone**  
@@ -36,6 +36,16 @@ The task was very simple. I tried to develop using Test Driven Development (TDD)
 Most of the application text was defined as resource "application_en_GB.properties"  so that it can be localized in a different language easily.
 
 The app is designed as loose coupling. It can be easily expanded.  
+
+## Application execution and testing
+Java's main class is defined in **CoffeeCornerClient** class. Any Java IDE can run this main class. It is a console app so it prompts users inputs. Just enter a menu item number such as 1, 2 , 3, 4 , etc. Once all the order is selected you have to enter 0 (zero) for the payment.
+
+I have implemented an integration type of end-to-end test class CoffeeCornerClientIT. It can be found in JUnit's test package org.example.integration.
+
+You can quickly check the application's all the features such as:-
+* Give free drink on every 5th purchase
+* Give 1 free extra when beverage and a snack in the same order
+* Order all times each
 
 p.s: To see the free drink logic you have to make 4 purchases in the same application execution time. Because I was not allowed to use any kind of data storage system as a database.
 

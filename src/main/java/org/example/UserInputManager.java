@@ -6,6 +6,9 @@ import java.util.regex.Pattern;
 
 import static javax.swing.JOptionPane.ERROR_MESSAGE;
 
+/**
+ *  It manages all your input from the console.
+ */
 public class UserInputManager {
     private static int inputNumber = 0;
     private static Scanner scanner = null;
@@ -46,7 +49,7 @@ public class UserInputManager {
         return true;
     }
 
-    public static boolean isNumeric(String inputStr){
+    private static boolean isNumeric(String inputStr){
         Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
         if (inputStr == null) {
             return false;
@@ -61,6 +64,9 @@ public class UserInputManager {
         System.exit(-1);
     }
 
+    /**
+     * It is a known bug for Scanner that it must close only once per application when it is done.
+     */
     public static void closeScanner(){
         if(scanner != null){
             scanner.close();

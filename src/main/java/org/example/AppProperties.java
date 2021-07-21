@@ -30,6 +30,7 @@ public class AppProperties {
     public static final String specialRoastCoffeeNameKey= "specialRoastCoffeeNameKey";
     public static final String specialRoastCoffeePriceKey= "specialRoastCoffeePriceKey";
     public static final String appTitleKey = "appTitleKey";
+    public static final String paymentReceipt = "paymentReceipt";
 
 
     private AppProperties() {
