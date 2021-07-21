@@ -49,7 +49,7 @@ public class UserInputManager {
         return true;
     }
 
-    private static boolean isNumeric(String inputStr){
+    public static boolean isNumeric(String inputStr){
         Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
         if (inputStr == null) {
             return false;

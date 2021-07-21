@@ -5,11 +5,17 @@ import org.example.ConsolePrinter;
 import org.example.MenuItemNumber;
 import org.example.Receipt;
 import org.example.TestData;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CoffeeCornerClientIT {
+
+    @BeforeEach
+    void setUp() {
+        Receipt.resetItemPriceCalculators();
+    }
 
     @Test
     void testNormalOrder(){
