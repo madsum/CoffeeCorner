@@ -47,5 +47,6 @@ You can quickly check the application's all the features such as:-
 * Give 1 free extra when beverage and a snack in the same order
 * Order all times each
 
+
 p.s: To see the free drink logic you have to make 4 purchases in the same application execution time. Because I was not allowed to use any kind of data storage system as a database.
 
